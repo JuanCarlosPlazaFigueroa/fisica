@@ -1,0 +1,118 @@
+<!--   <div></div>  -->
+
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-5" style="margin-left: 25%;">
+            <p class="fs-1">Caida libre</p>
+        </div>
+    </div>
+
+    <div class="card border-warning bg-warning mb-4">
+        <div class="card-body ">
+            <p class="fs-5">En la caída libre un objeto cae verticalmente
+                desde cierta altura H despreciando cualquier tipo
+                de rozamiento con el aire o cualquier otro obstáculo.
+                Se trata de un movimiento rectilíneo uniformemente acelerado (m.r.u.a.)
+                o movimiento rectilíneo uniformemente variado (m.r.u.v.) en el que la aceleración coincide con el
+                valor
+                de la gravedad</p>
+        </div>
+    </div>
+
+
+    <a class="fs-6" style="cursor: pointer;" (click)="volverPantallaAnterior()">Pantalla anterior</a>
+    <form [formGroup]="caidaLibre1Form">
+
+        <div class="card border-secondary mt-4">
+            <div class="row m-4">
+                <div class="col-md-5 align-self-start">
+
+                    <p class="font-italic text-danger">Ejercicio 1: </p>
+
+                    <img class="img mx-auto p-2" width="300rem" src="assets/images/caidaLibre.jpg" alt="caidaLibre"
+                        style="margin-left: 30% !important;">
+                </div>
+
+
+                <div class="mb-3 col-md-3">
+
+                    <p class="font-weight-bold">¿ Desde que altura debe caer un objeto para golpear el suelo con
+                        velocidad
+                        de 20 m/s ?</p>
+
+                    <label for="inputVelocidadFinal" class="form-label mt-3">Velocidad final (m/s)</label>
+                    <input type="number" class="form-control" id="inputVelocidadFinal"
+                        placeholder="Ingresar velocidad Final" formControlName="velFinal">
+
+                    <label for="inputVelocidadInicial" class="form-label mt-3">Velocidad inicial (m/s)</label>
+                    <input type="number" class="form-control" id="inputVelocidadInicial"
+                        placeholder="Ingresar velocidad Inicial" formControlName="velInicial">
+
+                    <label for="inputGravedad" class="form-label mt-3">Gravedad </label>
+                    <input type="number" class="form-control" id="inputGravedad" placeholder="Ingrese la gravedad"
+                        formControlName="gravedad">
+
+                    <div class="col-auto" >
+                        <button type="submit" class="btn btn-primary mt-3" [disabled]="caidaLibre1Form.invalid"
+                            (click)="calcularCaidaLibreEjercicio1()">Calcular</button>
+                    </div>
+
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <label for="respuestaEjercicio2" style="margin-top: 4rem!important;"
+                        class="form-label mt-3"><strong>{{respuestaEjercicio1}}</strong></label>
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+    <form [formGroup]="caidaLibre2Form">
+
+        <div class="card border-secondary mt-3 mb-3">
+            <div class="row m-4">
+                <div class="col-md-5 align-self-start">
+
+                    <p class="font-italic text-danger">Ejercicio 2: </p>
+
+                    <img class="img mx-auto p-2" width="300rem" src="assets/images/caidaLibre2.jpg" alt="caidaLibre"
+                        style="margin-left: 30% !important;">
+                </div>
+
+
+                <div class="mb-3 col-md-3">
+
+                    <p class="font-weight-bold">Se deja caer un balón desde la azotea e un edificio que tiene una altura
+                        de
+                        13 m. ¿En qué tiempo toca el piso?</p>
+
+                    <label for="inputAltura" class="form-label mt-3">Altura (m/s)</label>
+                    <input type="number" class="form-control" id="inputAltura" placeholder="Ingresar la altura"
+                        formControlName="altura">
+
+                    <label for="inputVelocidadInicial" class="form-label mt-3">Velocidad inicial (m/s)</label>
+                    <input type="number" class="form-control" id="inputVelocidadInicial"
+                        placeholder="Ingresar velocidad Inicial" formControlName="velInicial">
+
+                    <label for="inputGravedad" class="form-label mt-3">Gravedad</label>
+                    <input type="number" class="form-control" id="inputGravedad" placeholder="Ingrese la gravedad"
+                        formControlName="gravedad">
+
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mt-3" [disabled]="caidaLibre2Form.invalid"
+                            (click)="calcularCaidaLibreEjercicio2()">Calcular</button>
+                    </div>
+
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <label for="respuestaEjercicio2" style="margin-top: 4rem!important;" 
+                        class="form-label mt-3"><strong>{{respuestaEjercicio2}}</strong></label>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+</div>

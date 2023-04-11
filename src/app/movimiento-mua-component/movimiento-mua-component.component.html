@@ -1,0 +1,73 @@
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-7" style="margin-left: 7%;">
+            <p class="fs-1">Movimiento uniforme acelerado (MUA) </p>
+        </div>
+    </div>
+
+    <div class="card border-warning bg-warning mb-4">
+        <div class="card-body ">
+            <p class="fs-5">todo movimiento uniformemente acelerado (MUA)
+                es aquel movimiento en el que la aceleración que experimenta un cuerpo,
+                permanece constante (en magnitud y dirección) en el transcurso del tiempo</p>
+        </div>
+    </div>
+
+
+    <a class="fs-6" style="cursor: pointer;" (click)="volverPantallaAnterior()">Pantalla anterior</a>
+    <form [formGroup]="movimientoMuaForm">
+
+        <div class="card border-secondary mt-4">
+            <div class="row m-4">
+                <div class="col-md-5 align-self-start">
+
+                    <img class="img mx-auto p-2 mt-5" width="400rem" src="assets/images/tren.png" alt="motociclista">
+                </div>
+
+
+                <div class="mb-3 col-md-3">
+
+                    <p class="font-weight-bold">Un tren que viaja inicialmente a 16 m/seg se acelera constantememnte a
+                        razón de 2 m/seg</p>
+
+                    <li class="mb-3">¿ Que tan lejos viajara en 20 segundos ?</li>
+                    <li>¿ Cual sera su velocidad final ?</li>
+
+                    <label for="inputAceleracion" class="form-label mt-3">Aceleracion </label>
+                    <input type="number" class="form-control" id="inputAceleracion" placeholder="Ingrese su acelaraciòn"
+                        formControlName="aceleracion">
+
+                    <label for="inputVelocidadInicial" class="form-label mt-3">Velocidad inicial (m/s)</label>
+                    <input type="number" class="form-control" id="inputVelocidadInicial"
+                        placeholder="Ingresar velocidad Inicial" formControlName="velInicial">
+
+                    <label for="inputTiempo" class="form-label mt-3">Tiempo </label>
+                    <input type="number" class="form-control" id="inputTiempo" placeholder="Ingrese el tiempo"
+                        formControlName="tiempo">
+
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mt-3" [disabled]="movimientoMuaForm.invalid"
+                            (click)="calcularEjercicioMovimientoMua()">Calcular</button>
+                    </div>
+
+                </div>
+                <div class="col-md-4 align-self-center" style="margin-top: 9rem!important;">
+                    <div>
+                        <label for="respuestaEjercicioVelocidadFinal"
+                        class="form-label mt-3"><strong>{{respuestaEjercicioVelocidadFinal}}</strong></label>
+                    </div>
+                    <div>
+                        <label for="respuestaEjercicioDistancia" 
+                        class="form-label mt-3"><strong>{{respuestaEjercicioDistancia}}</strong></label>
+                    </div>
+     
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
